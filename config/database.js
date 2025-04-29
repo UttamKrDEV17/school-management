@@ -11,7 +11,8 @@ const poolConfig = mysql.createPool({
     connectionLimit: 10,       
     queueLimit: 0, 
     ssl: {
-        ca:  process.env.MYSQL_CA_PEM.replace(/\\n/g, '\n')
+        ca:  process.env.MYSQL_CA_PEM?.replace(/\\n/g, '\n'),
+        rejectUnauthorized: false
     }
 })
 
