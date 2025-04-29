@@ -1,8 +1,5 @@
 import mysql from 'mysql2/promise'
-import fs from 'fs/promises'
 
-
-const ca = await fs.readFile('./certs/ca.pem');
 
 const poolConfig = mysql.createPool({
     host: process.env.HOST,
@@ -14,7 +11,7 @@ const poolConfig = mysql.createPool({
     connectionLimit: 10,       
     queueLimit: 0, 
     ssl: {
-        ca
+        ca:  process.env.MYSQL_CA_PEM.replace(/\\n/g, '\n')
     }
 })
 
