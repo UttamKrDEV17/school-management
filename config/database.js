@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise'
 import fs from 'fs/promises'
 
 
-const ca = await fs.readFile('../certs/ca.pem');
+const ca = await fs.readFile('./certs/ca.pem');
 
 const poolConfig = mysql.createPool({
     host: process.env.HOST,
