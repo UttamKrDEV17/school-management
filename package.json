@@ -1,0 +1,25 @@
+{
+  "name": "school-management",
+  "version": "1.0.0",
+  "description": "school management system",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "mySQL",
+    "APIs"
+  ],
+  "author": "uttam kumar",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}
